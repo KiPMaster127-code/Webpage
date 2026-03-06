@@ -1,10 +1,15 @@
-const nav = document.getElementById("navbar");
-const toggle = document.getElementById("navToggle");
+const menuButton = document.getElementById("navToggle");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
 
-toggle.addEventListener("click", () => {
-  if (nav.style.display === "block") {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "block";
-  }
+menuButton.addEventListener("click", () => {
+  sideMenu.classList.add("open");
+  overlay.style.display = "block";
+  menuButton.style.display = "none";
+});
+
+overlay.addEventListener("click", () => {
+  sideMenu.classList.remove("open");
+  overlay.style.display = "none";
+  menuButton.style.display = "block";
 });
