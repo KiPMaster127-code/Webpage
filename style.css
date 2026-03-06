@@ -1,0 +1,160 @@
+body {
+  background-color: #faf7f5; 
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #4a3f35; 
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #c49b66; 
+  margin: 1rem 0 0.5rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+  color: #6b5a4a;
+}
+
+
+p, li {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+
+label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b5a4a;
+}
+
+
+.menu-button {
+  background-color: #c49b66;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: inline-block;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.menu-button:hover {
+  background-color: #a88252;
+  transform: scale(1.05);
+}
+
+
+#navbar {
+  display: none; 
+  background-color: #c49b66;
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+#navbar a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  transition: opacity 0.2s ease;
+}
+
+#navbar a:hover {
+  opacity: 0.7;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 80%;
+  max-width: 400px;
+  padding: 0.7rem;
+  margin: 0.3rem auto;
+  border: 1px solid #d8cfc8;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  display: block;
+  color: #4a3f35;
+}
+
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+.button-row button {
+  background-color: #c49b66;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  width: auto;
+  min-width: 100px;
+  text-align: center;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.button-row button:hover {
+  background-color: #a88252;
+  transform: scale(1.05);
+}
+
+textarea {
+  width: 80%;
+  max-width: 400px;
+  height: 120px; 
+  padding: 0.7rem;
+  margin: 0.3rem auto;
+  border: 1px solid #d8cfc8;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  color: #4a3f35;
+  resize: vertical; 
+}
