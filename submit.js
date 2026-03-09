@@ -6,8 +6,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const message = document.getElementById("message").value.trim();
     const phonenumber = document.getElementById("phonenumber").value.trim();
     const event = document.getElementById("event").value.trim();
-    const partnername = document.getElementById("partnername").value.trim();
-    const data = { name, email, message, phonenumber, event, partnername };
+    const data = { name, email, message, phonenumber, event };
 
     const response = await fetch("https://formspree.io/f/mjgabqae" , {
         method: "POST",
