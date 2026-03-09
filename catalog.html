@@ -25,14 +25,58 @@
 
     <h1>Catalogs</h1>
 
-    <h2>Here will be catalog page</h2>
+    <h2>Here you will see some of our current available products for rent</h2>
 
-    <p>Here we are gonna put the products with their description </p>
- 
-    <footer>
-        <p>@Alpha 2026</p>
-    </footer>
+<div class="product-grid">
 
+    <div class="product-card" data-name="Rose Bouquet" data-price="$49.99" data-desc="A beautiful artificial rose bouquet perfect for weddings.">
+        <img src="Product 1.jpg">
+        <h3>Rose Bouquet</h3>
+        <p>$49.99</p>
+    </div>
+
+    <div class="product-card" data-name="White Centerpiece" data-price="$79.99" data-desc="Elegant centerpiece with white florals and greenery.">
+        <img src="Product 2.jpg">
+        <h3>White Centerpiece</h3>
+        <p>$79.99</p>
+    </div>
+
+    <div class="product-card" data-name="Peony Arrangement" data-price="$59.99" data-desc="Soft pink peonies arranged in a modern vase.">
+        <img src="Product 3.jpg">
+        <h3>Peony Arrangement</h3>
+        <p>$59.99</p>
+    </div>
+
+    <div class="product-card" data-name="Floral Arch" data-price="$199.99" data-desc="Large floral arch rental for ceremonies.">
+        <img src="Product 4.jpg">
+        <h3>Floral Arch</h3>
+        <p>$199.99</p>
+    </div>
+
+    <div class="product-card" data-name="Bridal Bouquet" data-price="$89.99" data-desc="Premium bridal bouquet with mixed florals.">
+        <img src="Product 6.jpg">
+        <h3>Bridal Bouquet</h3>
+        <p>$89.99</p>
+    </div>
+
+    <div class="product-card" data-name="Greenery Garland" data-price="$39.99" data-desc="Lush greenery garland for tables or decor.">
+        <img src="Product 5.jpg">
+        <h3>Greenery Garland</h3>
+        <p>$39.99</p>
+    </div>
+
+</div>
+
+<div id="productModal" class="product-modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <h3 id="modalPrice"></h3>
+    </div>
+</div>
+
+<script src="catalog.js"></script>
 <script src="menuscript.js"></script>
 
 
