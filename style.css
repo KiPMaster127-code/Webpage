@@ -323,6 +323,23 @@ textarea {
   color: #a88252;
 }
 
+.input-error {
+  border: 2px solid #b33a3a !important;
+  background-color: #fff5f5;
+}
+
+.error-popup {
+  position: absolute;
+  background: #b33a3a;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  transform: translateY(-5px);
+}
+
+
 
 @media (max-width: 600px) {
 

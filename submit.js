@@ -1,6 +1,44 @@
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
     e.preventDefault(); 
 
+    const fields = [
+        { id: "name", message: "Please enter your name" },
+        { id: "email", message: "Please enter your email" },
+        { id: "event", message: "Please enter the event date" },
+        { id: "message", message: "Please enter your message" }
+    ];
+
+    let valid = true;
+
+
+    fields.forEach(f => {
+        document.getElementById(f.id).classList.remove("input-error");
+    });
+
+    fields.forEach(f => {
+        const el = document.getElementById(f.id);
+
+    if (el.value.trim() === "") {
+            valid = false;
+            el.classList.add("input-error");
+
+            
+            const popup = document.createElement("div");
+            popup.className = "error-popup";
+            popup.textContent = f.message;
+
+            const rect = el.getBoundingClientRect();
+            popup.style.left = rect.left + "px";
+            popup.style.top = (rect.top - 35) + "px";
+
+            document.body.appendChild(popup);
+
+            setTimeout(() => popup.remove(), 2000);
+        }
+    });
+
+    if (!valid) return; 
+
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
