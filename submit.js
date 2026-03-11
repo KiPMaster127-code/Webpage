@@ -10,47 +10,47 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     let valid = true;
 
-
     fields.forEach(f => {
-        document.getElementById(f.id).classList.remove("input-error");
+        const el = document.getElementById(f.id);
+        const container = el.parentNode;
+
+        el.classList.remove("input-error");
+
+        const oldPopup = container.querySelector(".error-popup");
+        if (oldPopup) oldPopup.remove();
     });
 
     fields.forEach(f => {
         const el = document.getElementById(f.id);
+        const container = el.parentNode;
 
-    if (el.value.trim() === "") {
+        if (el.value.trim() === "") {
             valid = false;
             el.classList.add("input-error");
 
-            
             const popup = document.createElement("div");
             popup.className = "error-popup";
             popup.textContent = f.message;
 
-            const rect = el.getBoundingClientRect();
-            popup.style.left = rect.left + "px";
-            popup.style.top = (rect.top - 35) + "px";
-
-            document.body.appendChild(popup);
-
+            container.appendChild(popup);
             setTimeout(() => popup.remove(), 2000);
         }
     });
 
-    if (!valid) return; 
+    if (!valid) return;
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const phonenumber = document.getElementById("phonenumber").value.trim();
-    const event = document.getElementById("event").value.trim();
-    const data = { name, email, message, phonenumber, event };
+    const data = {
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        phonenumber: document.getElementById("phonenumber").value.trim(),
+        event: document.getElementById("event").value.trim(),
+        message: document.getElementById("message").value.trim()
+    };
 
     const response = await fetch("https://formspree.io/f/mjgabqae" , {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { 
+            "Content-Type": "application/json" },
         body: JSON.stringify(data)
     });
 

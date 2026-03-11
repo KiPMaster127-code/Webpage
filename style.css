@@ -323,21 +323,27 @@ textarea {
   color: #a88252;
 }
 
-.input-error {
-  border: 2px solid #b33a3a !important;
-  background-color: #fff5f5;
+.input-container {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  margin: 0.3rem auto;
 }
 
 .error-popup {
   position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #b33a3a;
   color: white;
-  padding: 0.4rem 0.7rem;
+  padding: 0.35rem 0.7rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  white-space: nowrap;
   z-index: 9999;
-  transform: translateY(-5px);
 }
+
 
 
 
