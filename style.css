@@ -2,31 +2,34 @@ body {
   background-color: #faf7f5;
   font-family: "Playfair Display", serif;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   color: #4a3f35;
+  max-width: 100%;
+  overflow-x: hidden; 
 }
 
 h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 6rem;
+  font-size: 3rem;
   color: #c49b66;
   margin-top: 1rem;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   color: #6b5a4a;
   margin: 0.5rem 0;
 }
+
 
 .index-text {
   width: 90%;
   max-width: 750px;
   margin: 1.5rem auto;
   text-align: center;
-  line-height: 2.5rem;
-  font-size: 1.5rem;
+  line-height: 1.6rem;
+  font-size: 1.05rem;
 }
 
 
@@ -36,16 +39,33 @@ h2 {
   justify-content: center;
   gap: 1rem;
   margin: 2rem auto;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; 
 }
 
 .index-gallery-img {
-  width: 310px;
-  height: 400px;
+  width: 210px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+
+@media (max-width: 500px) {
+  .index-gallery-img {
+    width: 160px;
+    height: 230px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  body {
+    text-align: center;
+    overflow-x: hidden;
+  }
+}
+
 
 .nav-top {
   position: relative;
@@ -108,6 +128,7 @@ h2 {
   to { opacity: 1; transform: translateY(0); }
 }
 
+
 input[type="text"],
 textarea {
   width: 80%;
@@ -126,6 +147,7 @@ textarea {
   height: 120px;
   resize: vertical;
 }
+
 
 .button-row {
   display: flex;
@@ -150,6 +172,7 @@ textarea {
   transform: scale(1.05);
 }
 
+
 .overlay {
   display: none;
   position: fixed;
@@ -167,6 +190,7 @@ textarea {
   display: block;
   opacity: 1;
 }
+
 
 .side-menu {
   position: fixed;
@@ -199,6 +223,7 @@ textarea {
 .side-menu a:hover {
   background: rgba(0,0,0,0.05);
 }
+
 
 .faq-item {
   width: 80%;
@@ -275,12 +300,33 @@ textarea {
 .product-card h3 {
   margin: 0.5rem 0 0;
   color: #4a3f35;
-  
 }
 
 .product-card p {
   color: #c49b66;
   font-weight: bold;
+}
+
+
+#modalName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #4a3f35;
+  margin-top: 1rem;
+}
+
+#modalDesc {
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  color: #6b5a4a;
+  margin: 0.8rem 0;
+}
+
+#modalPrice {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #c49b66;
+  margin-top: 0.5rem;
 }
 
 
@@ -355,7 +401,6 @@ textarea {
 .img-nav:hover {
   background: rgba(0,0,0,0.6);
 }
-
 
 @media (max-width: 600px) {
   h1 { font-size: 2.4rem; }
