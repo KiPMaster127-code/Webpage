@@ -3,85 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Catalogue</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- 
+
     <div class="nav-top">
-    <button id="navToggle" class="menu-button">Menu</button>
+        <button id="navToggle" class="menu-button">Menu</button>
     </div>
+
     <div id="overlay" class="overlay"></div>
+
     <div id="sideMenu" class="side-menu">
-    <a href="index.html">Main Page</a>
-    <a href="catalogue.html">Catalogue</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="faq.html">FAQ</a>
+        <a href="index.html">Main Page</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
     </div>
 
     <h1>Catalogue</h1>
-
     <h2>Here you will see some of our current available products for rent</h2>
 
-<div class="product-grid">
+    <div class="product-grid">
 
-    <div class="product-card" data-name="Rose Bouquet" data-price="$49.99" data-desc="A beautiful artificial rose bouquet perfect for weddings.">
-    <img src="Product 1.jpg">
-    <h3>Rose Bouquet</h3>
-    <p>$49.99</p>
+        <div class="product-card" data-name="Garden Romance" data-price="$250" data-desc="Perfect for outdoor ceremonies surrounded by nature and flowers." data-images="Product 1.jpg, Product 1b.jpg">
+            <img src="Product 1.jpg">
+            <h3>Garden Romance</h3>
+            <p>Starting at $250</p>
+        </div>
+
+        <div class="product-card" data-name="Elegant Frame" data-price="$125" data-desc="A refined and modern arch that highlights the beauty of the ceremony." data-images="Product 2.jpg">
+            <img src="Product 2.jpg">
+            <h3>Elegant Frame</h3>
+            <p>Starting at $125</p>
+        </div>
+
+        <div class="product-card"
+             data-name="Eternal"
+             data-price="$125"
+             data-desc="A timeless deisgn symbolizing everlasting love."
+             data-images="Product 3.jpg">
+            <img src="Product 3.jpg">
+            <h3>Eternal</h3>
+            <p>Starting at $125</p>
+        </div>
+
+        <div class="product-card"
+             data-name="Harmony"
+             data-price="$150"
+             data-desc="A minimalist arch that brings balance and elegence to the ceremony space."
+             data-images="Product 4.jpg">
+            <img src="Product 4.jpg">
+            <h3>Harmony</h3>
+            <p>Starting at $150</p>
+        </div>
+
+        <div class="product-card"
+             data-name="Harmony 2"
+             data-price="$150"
+             data-desc="A beautiful centerpiece that frames the moment couples say 'I do'  "
+             data-images="Product 5.jpg, Product 5b.jpg">
+            <img src="Product 5.jpg">
+            <h3>Harmony 2</h3>
+            <p>Starting at $150</p>
+        </div>
+
+        <div class="product-card"
+             data-name="Whispering Vows"
+             data-price="$100"
+             data-desc="Designed for intimate and romantic ceremonies."
+             data-images="Product 6.jpg, Product 6b.jpg">
+            <img src="Product 6.jpg">
+            <h3>Whispering Vows</h3>
+            <p>Starting at $100</p>
+        </div>
+
+        <div class="product-card"
+             data-name="Celebration"
+             data-price="$100"
+             data-desc="Creates a joyful and unforgettable ceremony setting."
+             data-images="Product 7.jpg, Product 7b.jpg">
+            <img src="Product 7.jpg">
+            <h3>Celebration</h3>
+            <p>Starting at $100</p>
+        </div>
+
+        <div class="product-card"
+             data-name="The Golden Promise"
+             data-price="$125"
+             data-desc="A sophisticated arch that adds luxurious atmosphere."
+             data-images="Product 8.jpg">
+            <img src="Product 8.jpg">
+            <h3>The Golden Promise</h3>
+            <p>Starting at $125</p>
+        </div>
+
     </div>
 
-    <div class="product-card" data-name="White Centerpiece" data-price="$79.99" data-desc="Elegant centerpiece with white florals and greenery.">
-    <img src="Product 2.jpg">
-    <h3>White Centerpiece</h3>
-    <p>$79.99</p>
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+
+            <span id="closeModal" class="close-btn">&times;</span>
+
+            <div class="modal-img-container">
+                <button id="prevImg" class="img-nav">&#10094;</button>
+                <img id="modalImg" class="modal-img">
+                <button id="nextImg" class="img-nav">&#10095;</button>
+            </div>
+
+            <h2 id="modalName"></h2>
+            <p id="modalDesc"></p>
+            <h3 id="modalPrice"></h3>
+
+        </div>
     </div>
 
-    <div class="product-card" data-name="Peony Arrangement" data-price="$59.99" data-desc="Soft pink peonies arranged in a modern vase.">
-    <img src="Product 3.jpg">
-    <h3>Peony Arrangement</h3>
-    <p>$59.99</p>
-    </div>
-
-    <div class="product-card" data-name="Floral Arch" data-price="$199.99" data-desc="Large floral arch rental for ceremonies.">
-    <img src="Product 4.jpg">
-    <h3>Floral Arch</h3>
-    <p>$199.99</p>
-    </div>
-
-    <div class="product-card" data-name="Bridal Bouquet" data-price="$89.99" data-desc="Premium bridal bouquet with mixed florals.">
-    <img src="Product 6.jpg">
-    <h3>Bridal Bouquet</h3>
-    <p>$89.99</p>
-    </div>
-
-    <div class="product-card" data-name="Greenery Garland" data-price="$39.99" data-desc="Lush greenery garland for tables or decor.">
-    <img src="Product 5.jpg">
-    <h3>Greenery Garland</h3>
-    <p>$39.99</p>
-    </div>
-
-</div>
-
-<div id="productModal" class="product-modal">
-<div class="modal-content">
-<span id="closeModal" class="close-btn">&times;</span>
-<h2 id="modalName"></h2>
-<p id="modalDesc"></p>
-<h3 id="modalPrice"></h3>
-</div>
-</div>
-
-<script src="catalogue.js"></script>
-<script src="menuscript.js"></script>
-
+    <script src="catalogue.js"></script>
+    <script src="menuscript.js"></script>
 
 </body>
-
-
-
 </html>
