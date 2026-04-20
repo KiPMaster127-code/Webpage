@@ -15,59 +15,59 @@
 <body>
 
     <div class="nav-top">
-    <button id="navToggle" class="menu-button">Menu</button>
+        <button id="navToggle" class="menu-button">Menu</button>
     </div>
+
     <div id="overlay" class="overlay"></div>
+
     <div id="sideMenu" class="side-menu">
-    <a href="index.html">Main Page</a>
-    <a href="catalogue.html">Catalogue</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="faq.html">FAQ</a>
+        <a href="index.html">Main Page</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQ</a>
     </div>
-
-
 
     <h1>Contact Us Form</h1>
 
-
     <form id="contactForm">
-    <label for="name">Please enter your name *</label>
-    <div class="input-container">
-    <input type="text" id="name" name="name">
-    </div>
 
-    <label for="email">Please enter your email *</label>
-    <div class="input-container">
-    <input type="text" id="email" name="email">
-    </div>
+        <label for="name">Please enter your name *</label>
+        <div class="input-container">
+            <input type="text" id="name" name="name">
+        </div>
 
-    <label for="phonenumber">Please enter your phone number</label>
-    <div class="input-container">
-    <input type="text" id="phonenumber" name="phonenumber">
-    </div>
+        <label for="email">Please enter your email *</label>
+        <div class="input-container">
+            <input type="text" id="email" name="email">
+        </div>
 
-    <label for="event">Please enter the date and place of the event *</label>
-    <div class="input-container">
-    <input type="text" id="event" name="event">
-    </div>
+        <label for="phonenumber">Please enter your phone number</label>
+        <div class="input-container">
+            <input type="text" id="phonenumber" name="phonenumber">
+        </div>
 
-    <label for="message">Please enter your message *</label>
-    <div class="input-container">
-    <textarea id="message" name="message"></textarea>
-    </div>
+        <label for="event">Please enter the date and place of the event *</label>
+        <div class="input-container">
+            <input type="text" id="event" name="event">
+        </div>
 
-    <div class="button-row">
-        
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
-    </div>
+        <label for="message">Please enter your message *</label>
+        <div class="input-container">
+            <textarea id="message" name="message"></textarea>
+        </div>
+
+        <p id="errorMessage" class="error"></p>
+
+        <div class="button-row">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+
     </form>
 
     <footer>
         <p>@Lero Arch 2026</p>
     </footer>
-
-
 
     <script src="submit.js"></script>
     <script src="menuscript.js"></script>
