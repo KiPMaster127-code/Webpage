@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A" />
-    <title>Contact Page</title>
+    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A">
+    <title>Contact Us | Lero Arch</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,62 +16,62 @@
 <body>
 
     <div class="nav-top">
-        <button id="navToggle" class="menu-button">Menu</button>
+        <button id="navToggle" class="menu-button" aria-label="Open menu">Menu</button>
     </div>
 
     <div id="overlay" class="overlay"></div>
 
-    <div id="sideMenu" class="side-menu">
+    <nav id="sideMenu" class="side-menu" aria-hidden="true">
         <a href="index.html">Main Page</a>
         <a href="catalogue.html">Catalogue</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
         <a href="faq.html">FAQ</a>
-    </div>
+    </nav>
 
-    <h1>Contact Us Form</h1>
+    <main class="page-content fade-in">
 
-    <h2>We are located in Ottawa, Ontario proudly serving our local community </h2>
+        <h1>Contact Us</h1>
+        <h2>We are located in Ottawa, Ontario — proudly serving our local community</h2>
 
-    <br><br>
+        <form id="contactForm" class="contact-form">
 
-    <form id="contactForm">
+            <label for="name">Please enter your name *</label>
+            <div class="input-container">
+                <input type="text" id="name" name="name" required>
+            </div>
 
-        <label for="name">Please enter your name *</label>
-        <div class="input-container">
-            <input type="text" id="name" name="name">
-        </div>
+            <label for="email">Please enter your email *</label>
+            <div class="input-container">
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <label for="email">Please enter your email *</label>
-        <div class="input-container">
-            <input type="text" id="email" name="email">
-        </div>
+            <label for="phonenumber">Please enter your phone number</label>
+            <div class="input-container">
+                <input type="text" id="phonenumber" name="phonenumber">
+            </div>
 
-        <label for="phonenumber">Please enter your phone number</label>
-        <div class="input-container">
-            <input type="text" id="phonenumber" name="phonenumber">
-        </div>
+            <label for="event">Please enter the date and place of the event *</label>
+            <div class="input-container">
+                <input type="text" id="event" name="event" required>
+            </div>
 
-        <label for="event">Please enter the date and place of the event *</label>
-        <div class="input-container">
-            <input type="text" id="event" name="event">
-        </div>
+            <label for="message">Please enter your message *</label>
+            <div class="input-container">
+                <textarea id="message" name="message" required></textarea>
+            </div>
 
-        <label for="message">Please enter your message *</label>
-        <div class="input-container">
-            <textarea id="message" name="message"></textarea>
-        </div>
+            <p id="errorMessage" class="error"></p>
 
-        <p id="errorMessage" class="error"></p>
+            <div class="button-row">
+                <button type="reset" class="btn-secondary">Reset</button>
+                <button type="submit" class="btn-primary">Submit</button>
+            </div>
 
-        <div class="button-row">
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </div>
-
-    </form>
+        </form>
+    </main>
 
     <footer>
-        <p>@Lero Arch 2026</p>
+        <p>© Lero Arch 2026</p>
     </footer>
 
     <script src="submit.js"></script>

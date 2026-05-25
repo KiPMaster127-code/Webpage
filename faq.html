@@ -3,93 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A" />
-    <title>FAQ</title>
+    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A">
+    <title>FAQ | Lero Arch</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-     <div class="nav-top">
-    <button id="navToggle" class="menu-button">Menu</button>
+    <div class="nav-top">
+        <button id="navToggle" class="menu-button" aria-label="Open menu">Menu</button>
     </div>
+
     <div id="overlay" class="overlay"></div>
-    <div id="sideMenu" class="side-menu">
-    <a href="index.html">Main Page</a>
-    <a href="catalogue.html">Catalogue</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="faq.html">FAQ</a>
-    </div>
 
+    <nav id="sideMenu" class="side-menu" aria-hidden="true">
+        <a href="index.html">Main Page</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+    </nav>
 
-    <h1>Frequently Asked Questions</h1>
+    <main class="page-content fade-in">
 
-    <div class="faq-item">
-    <button class="faq-question">Do you provide written contract ?</button>
-    <div class="faq-answer">
-    <p>Yes we do, we provide a written agreement for every booking to ensure all details and services are confirmed and understood by both sides.</p>
-    </div>
-    </div>
+        <h1>Frequently Asked Questions</h1>
 
-    <div class="faq-item">
-    <button class="faq-question">Can the decorations be customized to match wedding theme ?</button>
-    <div class="faq-answer">
-    <p>Yes, we can create additional decorations of the arch to match the color palette and style of your wedding.</p>
-    </div>
-    </div>
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Do you provide written contract?
+            </button>
+            <div class="faq-answer">
+                <p>Yes we do, we provide a written agreement for every booking to ensure all details and services are confirmed and understood by both sides.</p>
+            </div>
+        </div>
 
-    <div class="faq-item">
-    <button class="faq-question">Do you offer delivery ?</button>
-    <div class="faq-answer">
-    <p>Yes, we deliver across Ottawa area while offering 2 separate packages for delivery. <br> <br>
-        Standard Delivery Package includes:<br>
-        Delivery <br>
-        Setup <br>
-        Next day dropoff by the client <br>
-        <br>
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Can the decorations be customized to match wedding theme?
+            </button>
+            <div class="faq-answer">
+                <p>Yes, we can create additional decorations of the arch to match the color palette and style of your wedding.</p>
+            </div>
+        </div>
 
-        'White Gloves' Delivery Package includes: <br>
-        Delivery <br>
-        Setup <br>
-        Pickup by us 'After 10:00 PM and before 1:00 AM same night'<br></p>
-    </div>
-    </div>
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Do you offer delivery?
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, we deliver across Ottawa area while offering 2 separate packages for delivery. <br><br>
+                    <strong>Standard Delivery Package includes:</strong><br>
+                    Delivery <br>
+                    Setup <br>
+                    Next day dropoff by the client <br><br>
 
-    <div class="faq-item">
-    <button class="faq-question">Do we take security deposit ?</button>
-    <div class="faq-answer">
-    <p>Yes, for all Arch rentals, we take a deposit for any potential damages or missing items. The deposit will be refundable following the successful pickup/dropoff of the Arch in it's original condition.</p>
-    </div>
-    </div>
+                    <strong>'White Gloves' Delivery Package includes:</strong><br>
+                    Delivery <br>
+                    Setup <br>
+                    Pickup by us (after 10:00 PM and before 1:00 AM same night)
+                </p>
+            </div>
+        </div>
 
-    <div class="faq-item">
-    <button class="faq-question">How far in advance should we reserve a wedding arch ?</button>
-    <div class="faq-answer">
-    <p>We recommend reserving your date as early as possible to ensure availability, especially during busy wedding season.</p>
-    </div>
-    </div>
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Do we take security deposit?
+            </button>
+            <div class="faq-answer">
+                <p>Yes, for all Arch rentals, we take a deposit for any potential damages or missing items. The deposit will be refundable following the successful pickup/dropoff of the Arch in its original condition.</p>
+            </div>
+        </div>
 
-    <div class="faq-item">
-    <button class="faq-question">Some of your pictures are made with AI, why is that ?</button>
-    <div class="faq-answer">
-    <p>Some images on our website were created with the help of AI to show how our Arches may look in different settings. </p>
-    </div>
-    </div>
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                How far in advance should we reserve a wedding arch?
+            </button>
+            <div class="faq-answer">
+                <p>We recommend reserving your date as early as possible to ensure availability, especially during busy wedding season.</p>
+            </div>
+        </div>
 
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                Some of your pictures are made with AI, why is that?
+            </button>
+            <div class="faq-answer">
+                <p>Some images on our website were created with the help of AI to show how our Arches may look in different settings.</p>
+            </div>
+        </div>
+
+    </main>
 
     <footer>
-        <p>@Lero Arch 2026</p>
+        <p>© Lero Arch 2026</p>
     </footer>
 
     <script src="menuscript.js"></script>
     <script src="faq.js"></script>
-    
+
 </body>
-
-
-
 </html>

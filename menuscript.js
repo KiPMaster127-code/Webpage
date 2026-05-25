@@ -4,12 +4,14 @@ const overlay    = document.getElementById("overlay");
 
 menuButton.addEventListener("click", () => {
   sideMenu.classList.add("open");
-  overlay.classList.add("show");   
-  menuButton.style.display = "none";
+  overlay.classList.add("show");
+  menuButton.classList.add("hidden");
 });
 
-overlay.addEventListener("click", () => {
+function closeMenu() {
   sideMenu.classList.remove("open");
-  overlay.classList.remove("show"); 
-  menuButton.style.display = "block";
-});
+  overlay.classList.remove("show");
+  menuButton.classList.remove("hidden");
+}
+
+overlay.addEventListener("click", closeMenu);

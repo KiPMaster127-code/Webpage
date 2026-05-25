@@ -2,120 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A" />
-    <title>Catalogue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="B3qELokgBgWiHQFSlKTsEhz2eOxjxwWJUf6JsqHdX7A">
+
+    <title>Catalogue | Lero Arch</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Oswald:wght@300;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="nav-top">
-        <button id="navToggle" class="menu-button">Menu</button>
-    </div>
+    <header class="nav-top">
+        <button id="navToggle" class="menu-button" aria-label="Open menu">Menu</button>
+    </header>
 
     <div id="overlay" class="overlay"></div>
 
-    <div id="sideMenu" class="side-menu">
+    <nav id="sideMenu" class="side-menu" aria-hidden="true">
         <a href="index.html">Main Page</a>
-        <a href="catalogue.html">Catalogue</a>
+        <a href="catalogue.html" aria-current="page">Catalogue</a>
         <a href="contact.html">Contact Us</a>
         <a href="faq.html">FAQ</a>
-    </div>
+    </nav>
 
-    <h1>Catalogue</h1>
-    <h2>Here you will see some of our current available products for rent</h2>
+    <main class="page-content fade-in">
+        <h1>Catalogue</h1>
+        <h2 class="subtitle">Explore our current selection of rental arches</h2>
 
-    <div class="product-grid">
+        <section class="product-grid">
 
-        <div class="product-card" data-name="Garden Romance" data-price="$250" data-desc="Perfect for outdoor ceremonies surrounded by nature and flowers." data-images="Product 1.jpg, Product 1b.jpg">
-            <img src="Product 1.jpg">
-            <h3>Garden Romance</h3>
-            <p>Starting at $250</p>
-        </div>
+            <article class="product-card"
+                data-name="Garden Romance"
+                data-price="$250"
+                data-desc="Perfect for outdoor ceremonies surrounded by nature and flowers."
+                data-images="Product 1.jpg, Product 1b.jpg">
+                <img src="Product 1.jpg" alt="Garden Romance wedding arch">
+                <h3>Garden Romance</h3>
+                <p class="price">Starting at $250</p>
+            </article>
 
-        <div class="product-card" data-name="Elegant Frame" data-price="$125" data-desc="A refined and modern arch that highlights the beauty of the ceremony." data-images="Product 2.jpg">
-            <img src="Product 2.jpg">
-            <h3>Elegant Frame</h3>
-            <p>Starting at $125</p>
-        </div>
+            <article class="product-card"
+                data-name="Elegant Frame"
+                data-price="$125"
+                data-desc="A refined and modern arch that highlights the beauty of the ceremony."
+                data-images="Product 2.jpg">
+                <img src="Product 2.jpg" alt="Elegant Frame wedding arch">
+                <h3>Elegant Frame</h3>
+                <p class="price">Starting at $125</p>
+            </article>
 
-        <div class="product-card"
-             data-name="Eternal"
-             data-price="$125"
-             data-desc="A timeless deisgn symbolizing everlasting love."
-             data-images="Product 3.jpg">
-            <img src="Product 3.jpg">
-            <h3>Eternal</h3>
-            <p>Starting at $125</p>
-        </div>
+            <article class="product-card"
+                data-name="Eternal"
+                data-price="$125"
+                data-desc="A timeless design symbolizing everlasting love."
+                data-images="Product 3.jpg">
+                <img src="Product 3.jpg" alt="Eternal wedding arch">
+                <h3>Eternal</h3>
+                <p class="price">Starting at $125</p>
+            </article>
 
-        <div class="product-card"
-             data-name="Harmony"
-             data-price="$150"
-             data-desc="A minimalist arch that brings balance and elegence to the ceremony space."
-             data-images="Product 4.jpg">
-            <img src="Product 4.jpg">
-            <h3>Harmony</h3>
-            <p>Starting at $150</p>
-        </div>
+            <article class="product-card"
+                data-name="Harmony"
+                data-price="$150"
+                data-desc="A minimalist arch that brings balance and elegance to the ceremony space."
+                data-images="Product 4.jpg">
+                <img src="Product 4.jpg" alt="Harmony wedding arch">
+                <h3>Harmony</h3>
+                <p class="price">Starting at $150</p>
+            </article>
 
-        <div class="product-card"
-             data-name="Harmony 2"
-             data-price="$150"
-             data-desc="A beautiful centerpiece that frames the moment couples say 'I do'  "
-             data-images="Product 5.jpg, Product 5b.jpg">
-            <img src="Product 5.jpg">
-            <h3>Harmony 2</h3>
-            <p>Starting at $150</p>
-        </div>
+            <article class="product-card"
+                data-name="Harmony 2"
+                data-price="$150"
+                data-desc="A beautiful centerpiece that frames the moment couples say 'I do'."
+                data-images="Product 5.jpg, Product 5b.jpg">
+                <img src="Product 5.jpg" alt="Harmony 2 wedding arch">
+                <h3>Harmony 2</h3>
+                <p class="price">Starting at $150</p>
+            </article>
 
-        <div class="product-card"
-             data-name="Whispering Vows"
-             data-price="$100"
-             data-desc="Designed for intimate and romantic ceremonies."
-             data-images="Product 6.jpg, Product 6b.jpg">
-            <img src="Product 6.jpg">
-            <h3>Whispering Vows</h3>
-            <p>Starting at $100</p>
-        </div>
+            <article class="product-card"
+                data-name="Whispering Vows"
+                data-price="$100"
+                data-desc="Designed for intimate and romantic ceremonies."
+                data-images="Product 6.jpg, Product 6b.jpg">
+                <img src="Product 6.jpg" alt="Whispering Vows wedding arch">
+                <h3>Whispering Vows</h3>
+                <p class="price">Starting at $100</p>
+            </article>
 
-        <div class="product-card"
-             data-name="Celebration"
-             data-price="$150"
-             data-desc="Creates a joyful and unforgettable ceremony setting."
-             data-images="Product 7.jpg, Product 7b.jpg">
-            <img src="Product 7.jpg">
-            <h3>Celebration</h3>
-            <p>Starting at $150</p>
-        </div>
+            <article class="product-card"
+                data-name="Celebration"
+                data-price="$150"
+                data-desc="Creates a joyful and unforgettable ceremony setting."
+                data-images="Product 7.jpg, Product 7b.jpg">
+                <img src="Product 7.jpg" alt="Celebration wedding arch">
+                <h3>Celebration</h3>
+                <p class="price">Starting at $150</p>
+            </article>
 
-        <div class="product-card"
-             data-name="The Golden Promise"
-             data-price="$125"
-             data-desc="A sophisticated arch that adds luxurious atmosphere."
-             data-images="Product 8.jpg">
-            <img src="Product 8.jpg">
-            <h3>The Golden Promise</h3>
-            <p>Starting at $125</p>
-        </div>
+            <article class="product-card"
+                data-name="The Golden Promise"
+                data-price="$125"
+                data-desc="A sophisticated arch that adds a luxurious atmosphere."
+                data-images="Product 8.jpg">
+                <img src="Product 8.jpg" alt="The Golden Promise wedding arch">
+                <h3>The Golden Promise</h3>
+                <p class="price">Starting at $125</p>
+            </article>
 
-    </div>
+        </section>
+    </main>
 
-    <div id="productModal" class="product-modal">
+    <div id="productModal" class="product-modal" aria-hidden="true">
         <div class="modal-content">
 
-            <span id="closeModal" class="close-btn">&times;</span>
+            <button id="closeModal" class="close-btn" aria-label="Close modal">&times;</button>
 
             <div class="modal-img-container">
-                <button id="prevImg" class="img-nav">&#10094;</button>
-                <img id="modalImg" class="modal-img">
-                <button id="nextImg" class="img-nav">&#10095;</button>
+                <button id="prevImg" class="img-nav" aria-label="Previous image">&#10094;</button>
+                <img id="modalImg" class="modal-img" alt="">
+                <button id="nextImg" class="img-nav" aria-label="Next image">&#10095;</button>
             </div>
 
             <h2 id="modalName"></h2>
@@ -124,10 +135,11 @@
 
         </div>
     </div>
+
     <footer>
-    <p>@Lero Arch 2026</p>      
+        <p>© Lero Arch 2026</p>
     </footer>
-    
+
     <script src="catalogue.js"></script>
     <script src="menuscript.js"></script>
 

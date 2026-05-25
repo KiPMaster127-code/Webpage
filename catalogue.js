@@ -23,7 +23,7 @@ cards.forEach(card => {
         images = card.dataset.images.split(",").map(img => img.trim());
         currentIndex = 0;
 
-        modalImg.src = images[currentIndex];
+        fadeImageChange(images[currentIndex]);
 
         if (images.length <= 1) {
             prevBtn.style.display = "none";
@@ -33,24 +33,38 @@ cards.forEach(card => {
             nextBtn.style.display = "block";
         }
 
-        modal.style.display = "flex";
+        modal.classList.add("open");
     });
 });
 
 prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    modalImg.src = images[currentIndex];
+    fadeImageChange(images[currentIndex]);
 });
 
 nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
-    modalImg.src = images[currentIndex];
+    fadeImageChange(images[currentIndex]);
 });
 
 closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+    modal.classList.remove("open");
 });
 
 modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
+    if (e.target === modal) modal.classList.remove("open");
 });
+
+function fadeImageChange(newSrc) {
+    modalImg.classList.add("fade-out");
+
+    setTimeout(() => {
+        modalImg.src = newSrc;
+        modalImg.classList.remove("fade-out");
+        modalImg.classList.add("fade-in");
+
+        setTimeout(() => {
+            modalImg.classList.remove("fade-in");
+        }, 200);
+    }, 200);
+}
